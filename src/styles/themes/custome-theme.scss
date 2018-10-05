@@ -1,0 +1,25 @@
+@import 'base/palette';
+@import 'base/background-color';
+@import 'base/border';
+@import 'base/padding';
+@import 'base/shadows';
+@import 'modules/common';
+@import 'modules/flag';
+@import 'modules/input';
+@import 'modules/type-scale';
+
+@import 'pages/layout/main';
+@import 'pages/login';
+@import 'pages/home';
+
+@mixin custom-components-theme($theme) {
+  $primary: map-get($theme, primary);
+  $primary-color: mat-color($primary, A200);
+
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @include module-input-theme($primary-color);
+}

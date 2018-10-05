@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+@import './themes/blue';
+@import './themes/grey';
+
+@import 'themes/custome-theme';
+
+.blue-theme {
+  @include angular-material-theme($blue-color-theme);
+  @include custom-components-theme($blue-color-theme);
+}
+
+.grey-theme {
+  @include angular-material-theme($grey-color-theme);
+  @include custom-components-theme($grey-color-theme);
+}

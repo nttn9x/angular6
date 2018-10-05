@@ -1,0 +1,23 @@
+.header {
+  width: $width-page-default;
+  height: 64px;
+  position: fixed;
+  z-index: 1;
+
+  .mat-toolbar {
+    color: $primary-color-text !important;
+    background-color: rgba(0, 0, 0, 0.15) !important;
+
+    .mat-toolbar-row {
+      justify-content: space-between;
+
+      .app-name {
+        cursor: pointer;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}

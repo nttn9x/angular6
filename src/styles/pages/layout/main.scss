@@ -1,0 +1,63 @@
+$width-page-default: 100%;
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic&amp;subset=latin-ext');
+
+html,
+body {
+  padding: 0 !important;
+  margin: 0 !important;
+  width: $width-page-default;
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.45;
+  color: $primary-text-color;
+}
+
+@import './header';
+
+.private-page {
+  height: 100%;
+  width: $width-page-default;
+  box-sizing: border-box;
+  margin: auto;
+  padding-top: 64px;
+  background: $background-color-lv0;
+  display: block;
+  position: absolute;
+}
+
+.public-page {
+  height: 100%;
+  width: $width-page-default;
+  box-sizing: border-box;
+  margin: auto;
+  background: $background-color-lv0;
+  display: block;
+  position: absolute;
+}
+
+.scrollbar-content {
+  overflow: auto;
+  &:focus {
+    outline: none;
+  }
+}
+
+.scrollbar-content::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background-color: #6e6e6e;
+  outline: #333 solid 1px;
+  border-radius: 4px;
+}
+
+.scrollbar-content::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}

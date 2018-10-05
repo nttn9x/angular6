@@ -1,0 +1,9 @@
+<div class="is-container">
+    <input (keyup)="onChange($event)" (keydown)="onKeydown($event)">
+    <button *ngIf="!isSearching" (click)="onSearch()" mat-button>
+        <mat-icon>search</mat-icon>
+    </button>
+
+    <mat-progress-spinner class="icon-loading" strokeWidth="2" diameter="40" *ngIf="isSearching" mode="indeterminate" color="primary">
+    </mat-progress-spinner>
+</div>

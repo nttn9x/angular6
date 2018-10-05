@@ -1,0 +1,14 @@
+<div class="root grey-theme login">
+
+  <div class="login__container">
+
+    <div class="login__container__form">
+      <h2 class="mat-h2 login__container__title">{{ 'LOGIN.TITLE' | translate }}</h2>
+      <app-login-form #formRef></app-login-form>
+      <button mat-raised-button color="primary" color="primary" class="login__container__button" (click)="login()">Login</button>
+    </div>
+
+    <app-public-languages [language]="lang$ | async"></app-public-languages>
+  </div>
+
+</div>

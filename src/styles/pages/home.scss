@@ -1,0 +1,130 @@
+.page-home {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  padding: $padding-body;
+  box-sizing: border-box;
+
+  .root-container {
+    flex: 0 0 70%;
+    display: flex;
+
+    .column-container {
+      flex: 1;
+      width: 100%;
+      height: 100%;
+      border-right: 10px solid transparent;
+
+      .card {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        border-radius: $border-card;
+        background-color: $background-color-lv3;
+        border: 4px solid transparent;
+        box-sizing: border-box;
+
+        .list-root {
+          width: 100%;
+          height: calc(100% - 52px);
+
+          virtual-scroll {
+            width: 100%;
+            height: calc(100% - 30px);
+
+            .data-item-root {
+              width: 100%;
+              height: 70px;
+              background-color: $background-color-lv0;
+              border-radius: $border-card;
+              margin-bottom: 10px;
+              box-shadow: $shadow1;
+              padding-top: 8px;
+              padding-bottom: 8px;
+              box-sizing: border-box;
+              display: flex;
+
+              .image {
+                flex: 0 0 50px;
+                height: 100%;
+                background: #419544;
+                margin-left: 8px;
+              }
+
+              .content {
+                flex: auto;
+                height: 100%;
+                margin-left: 8px;
+                margin-right: 8px;
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+                justify-content: space-around;
+
+                h6 {
+                  padding: 0;
+                  margin: 0;
+                }
+                div {
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .master-container {
+    flex: auto;
+    background-color: $background-color-lv0;
+  }
+
+  .banner {
+    flex: auto;
+  }
+
+  .search {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #263238;
+
+    .group-input {
+      position: relative;
+
+      input {
+        width: 400px;
+        height: 24px;
+        padding: 8px;
+      }
+
+      button {
+        border-radius: 0;
+        position: absolute;
+        right: 3px;
+        top: 3px;
+        width: 38px;
+        height: 38px;
+        box-shadow: none;
+
+        .mat-button-wrapper {
+          padding: 6px 0;
+        }
+
+        .mat-button-ripple-round {
+          border-radius: 0% !important;
+        }
+      }
+    }
+  }
+
+  .content {
+    flex: auto;
+  }
+}

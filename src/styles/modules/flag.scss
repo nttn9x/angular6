@@ -1,0 +1,24 @@
+@mixin flag($url_color, $url_no_color) {
+  background: url($url_no_color) no-repeat;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+
+  &.active {
+    background-image: url($url_color);
+  }
+}
+
+.flag--en {
+  @include flag(
+    './images/common/flags/language_en.png',
+    './images/common/flags/language_en_black.png'
+  );
+}
+
+.flag--fr {
+  @include flag(
+    './images/common/flags/language_fr.png',
+    './images/common/flags/language_fr_black.png'
+  );
+}

@@ -1,0 +1,15 @@
+<div class="page-home">
+  <div class="root-container">
+    <div class="column-container">
+      <div class="card">
+        <app-search class="is-root" (search)="searchArticle($event)" [isSearching]="isSearching$ | async"></app-search>
+        <app-articles class="list-root" [result]="result$ | async"></app-articles>
+      </div>
+    </div>
+    <div class="column-container">
+      <div class="card"></div>
+    </div>
+  </div>
+  <div class="master-container">
+  </div>
+</div>

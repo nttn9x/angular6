@@ -1,0 +1,7 @@
+<div class="number-count">
+  <span class="number">{{ result.total }}</span>
+  <span class="label">articles</span>
+</div>
+<virtual-scroll class="scrollbar-content" [items]="result.results" (update)="viewPortItems = $event">
+  <app-article class="data-item-root" *ngFor="let article of viewPortItems" [article]="article"></app-article>
+</virtual-scroll>
